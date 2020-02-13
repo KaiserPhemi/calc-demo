@@ -6,6 +6,7 @@
   flex-direction: column;
   font-size: 2rem;
   font-family: "Source Code Pro", monospace;
+  box-shadow: 3px 2px 5px 0px rgba(0, 0, 0, 0.2);
 }
 
 .calc-row {
@@ -18,6 +19,10 @@
   height: 4rem;
   background-color: black;
   color: white;
+}
+
+.result {
+  justify-self: end;
 }
 
 .clr-btn {
@@ -41,7 +46,7 @@
 }
 
 .calc-btn:hover {
-  background-color: #d8d9ce;
+  background-color: #d8d9cf;
 }
 
 .cta-btn {
