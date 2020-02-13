@@ -1,14 +1,43 @@
+const screen = document.querySelector(".result");
 let runningTotal = 0;
 let buffer = "0";
 let prevOperator;
 
-const screen = document.querySelector(".result");
-
+/**
+ * @desc handles button clicked
+ * @param {object} value
+ */
 const buttonClick = value => {
-  if (value === "C") {
-    screen.innerText = buffer;
+  if (isNaN(value)) {
+    handleSymbol(value);
   } else {
-    screen.innerText = value;
+    handleNumber(value);
+  }
+  screen.innerText = buffer;
+};
+
+/**
+ * @desc handles number operation
+ */
+const handleNumber = numString => {
+  if (buffer === "0") {
+    buffer = numString;
+  } else {
+    buffer += numString;
+  }
+};
+
+/**
+ * @desc handles symbol operation
+ */
+const handleSymbol = symbol => {
+  console.log(symbol);
+  switch (symbol) {
+    case "C":
+      buffer = "0";
+      runningTotal = 0;
+      break;
+    default:
   }
 };
 
